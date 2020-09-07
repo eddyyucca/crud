@@ -20,7 +20,11 @@ class Home extends CI_Controller
         $data['mhs'] = $this->mahasiswa->row($id);
         $this->load->view('edit_mhs', $data);
     }
-
+public function  print()
+{
+  $data['mhs'] = $this->mahasiswa->get();
+  $this->load->view('print', $data);
+}
     public function input()
     {
         $data = array(

@@ -9,13 +9,7 @@
 
 <body>
 
-	<form action="<?= base_url('home/input') ?>" method="POST">
-		<input type="text" name="nama_mahasiswa">
-		<input type="text" name="npm">
-		<button>Simpan</button>
-	</form>
-
-	<table>
+	<table border="1">
 		<tr>
 			<th>NO</th>
 			<th>Nama</th>
@@ -29,14 +23,12 @@
 				<td><?= $no++ ?></td>
 				<td><?= $row->nama_mhs ?></td>
 				<td><?= $row->npm ?></td>
-				<td>
-					<a href="<?= base_url('home/hapus/' . $row->id) ?>">HAPUS</a>
-					<a href="<?= base_url('home/edit/' . $row->id) ?>">EDIT</a>
-										<a href="<?= base_url('home/print/' . $row->id) ?>">PRINT</a>
-				</td>
+
 			</tr>
 		<?php } ?>
 	</table>
 </body>
-
+<script type="text/javascript">
+window.print();
+</script>
 </html>
