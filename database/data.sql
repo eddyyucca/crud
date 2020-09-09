@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Sep 2020 pada 03.50
+-- Waktu pembuatan: 09 Sep 2020 pada 13.32
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.8
 
@@ -18,36 +18,39 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `belajar`
+-- Database: `buku`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `data_mhs`
+-- Struktur dari tabel `data`
 --
 
-CREATE TABLE `data_mhs` (
+CREATE TABLE `data` (
   `id` int(10) NOT NULL,
-  `nama_mhs` varchar(20) NOT NULL,
-  `npm` varchar(20) NOT NULL
+  `kode` varchar(10) NOT NULL,
+  `judul` varchar(20) NOT NULL,
+  `pengarang` varchar(20) NOT NULL,
+  `penerbit` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `data_mhs`
+-- Dumping data untuk tabel `data`
 --
 
-INSERT INTO `data_mhs` (`id`, `nama_mhs`, `npm`) VALUES
-(1, 'puki ayam', '69696');
+INSERT INTO `data` (`id`, `kode`, `judul`, `pengarang`, `penerbit`) VALUES
+(1, '17222', 'ayat ayat cinta 2', 'eddy2', 'eddy2'),
+(2, '99999', 'buku php 2', 'eddy 2', 'erlangga 2');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `data_mhs`
+-- Indeks untuk tabel `data`
 --
-ALTER TABLE `data_mhs`
+ALTER TABLE `data`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -55,10 +58,10 @@ ALTER TABLE `data_mhs`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `data_mhs`
+-- AUTO_INCREMENT untuk tabel `data`
 --
-ALTER TABLE `data_mhs`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `data`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
