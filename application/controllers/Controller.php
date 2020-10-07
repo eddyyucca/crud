@@ -6,7 +6,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Controller extends CI_Controller
 {
 
-
+    // model langsung
     public function get()
     {
         return $this->db->get('data')->result();
@@ -17,12 +17,18 @@ class Controller extends CI_Controller
         $this->db->where('id', $id);
         return $this->db->get('data')->row();
     }
-
+    // end model
 
     public function index()
     {
         $data['data'] = $this->get();
         $this->load->view('index', $data);
+    }
+
+    public function cetak()
+    {
+        $data['data'] = $this->get();
+        $this->load->view('cetak', $data);
     }
 
     public function input()

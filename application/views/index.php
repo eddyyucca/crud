@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <a href="<?= base_url('buku/input') ?>">INPUT BUKU</a>
+    <a href="<?= base_url('Controller/input') ?>">INPUT BUKU</a> || <a href="<?= base_url('Controller/Cetak') ?>">CETAK BUKU</a>
     <table border="1">
         <tr>
             <th>KODE</th>
@@ -24,8 +24,8 @@
                 <td><?= $x->penerbit ?></td>
                 <td><?= $x->pengarang ?></td>
                 <td>
-                    <a href="<?= base_url('buku/edit/' . $x->id) ?>">EDIT</a>
-                    <a href="<?= base_url('buku/hapus/' . $x->id) ?>">HAPUS</a>
+                    <a href="<?= base_url('Controller/edit/' . $x->id) ?>">EDIT</a>
+                    <a href="<?= base_url('Controller/hapus/' . $x->id) ?>">HAPUS</a>
                 </td>
             </tr>
         <?php } ?>
